@@ -1,0 +1,106 @@
+:root {
+    --primary-color: #e67e22; /* Naranja apetitoso para CTAs */
+    --primary-hover: #d35400;
+    --secondary-color: #27ae60; /* Verde orgánico */
+    --secondary-hover: #219150;
+    --bg-dark: #2c3e50;
+    --bg-light: #f9f9f9;
+    --text-dark: #333;
+    --text-light: #fff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+
+/* Tipografía y Textos */
+h1, h2, h3 { color: var(--text-dark); margin-bottom: 1rem; }
+p { line-height: 1.6; color: #555; }
+.mt-2 { margin-top: 2rem; }
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+
+/* Botones (CTAs) */
+.btn { display: inline-block; padding: 0.8rem 1.5rem; font-weight: 600; border-radius: 5px; text-decoration: none; border: none; cursor: pointer; transition: 0.3s; font-size: 1rem; }
+.btn-primary { background: var(--primary-color); color: #fff; }
+.btn-primary:hover { background: var(--primary-hover); }
+.btn-secondary { background: transparent; border: 2px solid var(--primary-color); color: var(--primary-color); }
+.btn-secondary:hover { background: var(--primary-color); color: #fff; }
+.btn-whatsapp { background: #25D366; color: white; display: block; text-align: center; margin-top: 1rem; }
+.cta-group { margin-top: 2rem; display: flex; gap: 1rem; z-index: 10; position: relative; }
+
+/* Encabezado */
+header { position: fixed; top: 0; width: 100%; padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; transition: background 0.3s; }
+.logo { color: var(--text-light); text-decoration: none; font-size: 1.8rem; font-weight: 700; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
+.menu { list-style: none; display: flex; gap: 2rem; }
+.menu li a { color: var(--text-light); text-decoration: none; font-weight: 600; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
+.menu li a:hover { color: var(--primary-color); }
+
+/* Inicio y Parallax */
+.parallax { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-left: 10%; position: relative; overflow: hidden; background: #87CEEB; }
+.hero-content { z-index: 10; max-width: 600px; }
+.titulo { font-size: 4rem; color: #111; line-height: 1.1; margin-bottom: 1rem; }
+.subtitulo { font-size: 1.2rem; color: #333; font-weight: 600; }
+.parallax img { position: absolute; width: 100%; bottom: 0; left: 0; pointer-events: none; z-index: 1; }
+#titulo, .subtitulo, .cta-group { position: relative; z-index: 10; }
+
+/* Estilos de Secciones Generales */
+.section { padding: 6rem 5%; position: relative; }
+.container { max-width: 1200px; margin: 0 auto; }
+.light-bg { background: var(--bg-light); }
+.dark-bg { background: var(--bg-dark); color: var(--text-light); }
+.dark-bg h2, .dark-bg h3, .dark-bg p { color: var(--text-light); }
+.parallax-bg { background-attachment: fixed; background-size: cover; background-position: center; }
+.bg-nosotros { background-image: url('../images/bg-bosque.jpg'); background-color: #555; }
+.bg-contacto { background-image: url('../images/bg-restaurante.jpg'); background-color: #333; }
+.content-box { background: rgba(255,255,255,0.9); padding: 3rem; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+.bg-contacto .content-box { background: rgba(0,0,0,0.8); color: white; }
+.bg-contacto h2, .bg-contacto p, .bg-contacto h3 { color: white; }
+
+/* Nosotros */
+.mision-vision { display: flex; gap: 2rem; margin-top: 2rem; background: #f1f1f1; padding: 1.5rem; border-radius: 8px; }
+.valores-list { margin-left: 1.5rem; margin-bottom: 1.5rem; }
+.equipo-grid { display: flex; gap: 2rem; margin-top: 1rem; }
+.miembro { text-align: center; }
+.avatar-placeholder { width: 100px; height: 100px; background: #ccc; border-radius: 50%; line-height: 100px; margin: 0 auto 1rem; font-weight: bold; color: #fff; }
+
+/* Servicios */
+.grid-servicios { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
+.card-servicio { background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); }
+.lista-incluye { margin: 1rem 0 1rem 1.5rem; color: #ddd; }
+.precio-rango { display: block; font-weight: bold; font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--primary-color); }
+
+/* Ficha de Producto */
+.grid-productos { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem; margin-top: 3rem; }
+.card-producto { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08); display: flex; flex-direction: column; }
+.img-producto { width: 100%; height: 250px; object-fit: cover; background: #ddd; }
+.info-producto { padding: 2rem; display: flex; flex-direction: column; flex-grow: 1; }
+.info-producto h3 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+.resenas { color: #f1c40f; margin-bottom: 1rem; font-size: 0.9rem; }
+.desc-detallada { font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1; }
+.variantes { margin-bottom: 1.5rem; }
+.variantes select { width: 100%; padding: 0.5rem; margin-top: 0.5rem; border-radius: 4px; border: 1px solid #ccc; }
+.precio-final { font-size: 1.8rem; font-weight: 700; color: var(--text-dark); display: block; margin-bottom: 0.5rem; }
+.precio-final small { font-size: 0.9rem; color: #777; font-weight: 400; }
+.politicas-envio { font-size: 0.85rem; color: #27ae60; margin-bottom: 1.5rem; font-weight: 600; }
+.cta-comprar { width: 100%; }
+
+/* Contacto */
+.contacto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem; }
+.formulario { display: flex; flex-direction: column; gap: 1rem; }
+.formulario input, .formulario textarea { width: 100%; padding: 1rem; border-radius: 5px; border: 1px solid #555; background: #222; color: #fff; }
+.privacidad-check { display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.85rem; color: #ccc; text-align: left; }
+.privacidad-check input { width: auto; margin-top: 4px; }
+.privacidad-check a { color: var(--primary-color); }
+
+/* Footer */
+footer { background: #1a1a1a; color: #ddd; padding: 4rem 5% 1rem; font-size: 0.9rem; }
+.footer-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; border-bottom: 1px solid #333; padding-bottom: 3rem; }
+.footer-columna h3 { color: #fff; font-size: 1.2rem; margin-bottom: 1.5rem; }
+.footer-columna ul { list-style: none; }
+.footer-columna ul li { margin-bottom: 0.8rem; }
+.footer-columna a { color: #aaa; text-decoration: none; transition: 0.3s; }
+.footer-columna a:hover { color: var(--primary-color); }
+.form-newsletter { display: flex; margin-top: 1rem; }
+.form-newsletter input { flex: 1; padding: 0.8rem; border: none; border-radius: 4px 0 0 4px; }
+.form-newsletter button { padding: 0.8rem 1rem; background: var(--primary-color); color: #fff; border: none; border-radius: 0 4px 4px 0; cursor: pointer; font-weight: bold; }
+.redes-sociales a { margin-right: 1rem; font-weight: bold; }
+.footer-bottom { text-align: center; padding-top: 2rem; color: #777; }
